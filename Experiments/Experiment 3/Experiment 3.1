@@ -1,0 +1,7 @@
+https://www.codechef.com/learn/course/sql-intermediate/SQ00BS08/problems/GSQ82                    
+Submit link - https://www.codechef.com/viewsolution/1313609464
+
+Code - 
+select department, COUNT(CASE WHEN marks>80 THEN 1 ELSE NULL END)  AS Dept_HighScore_Count
+FROM student
+GROUP BY department;
