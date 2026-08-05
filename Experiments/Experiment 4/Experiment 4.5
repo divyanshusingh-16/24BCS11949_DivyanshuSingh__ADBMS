@@ -1,0 +1,20 @@
+-- We have a student table that also stores the Course_id of a student's favorite course. Our task has two parts related to using a SELF JOIN:
+
+--     Find pairs of students that belong to the same department.
+
+
+
+--     Identify students who have chosen the same Course_id as their favorite. Display the St_id, St_Name, and Course_id and order it in increasing Course_id.
+select S1.ST_ID,S1.ST_NAME,S1.Department ,
+S2.St_id ,S2.St_Name,S2.Department  
+from Student as s1
+join Student as S2
+on s1.ST_ID!=s2.ST_ID and s1.Department=s2.Department;
+
+
+---------2nd question 
+select S1.ST_ID,S1.ST_NAME,S1.Course_id
+from Student as s1
+join Student as S2
+on s1.ST_ID!=s2.ST_ID and s1.Course_id=s2.Course_id
+order by s1.Course_id;
