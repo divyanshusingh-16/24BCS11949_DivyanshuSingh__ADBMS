@@ -1,0 +1,11 @@
+--https://www.codechef.com/learn/course/sql-intermediate/SQ00BS07/problems/GSQ78A?tab=statement
+
+--Submission Link - https://www.codechef.com/viewsolution/1312931768
+
+/* Write a query to output a single table with the names of employees in both  the table 'employee' and 'pt_employee'.
+Employee names are added on the field emp_name in both the tables.
+Note: Do not remove the duplicate names while combining both the tables. */
+
+select emp_name from Employee
+union all
+select emp_name from pt_employee;

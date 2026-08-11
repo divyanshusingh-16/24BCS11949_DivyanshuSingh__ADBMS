@@ -1,0 +1,8 @@
+--https://www.codechef.com/learn/course/sql-intermediate/SQ00BS09/problems/GSQ85D?tab=statement
+
+--Submission Link - https://www.codechef.com/viewsolution/1328265589
+
+/* Write a query to find out what percentage of the total revenue (sum of all orders) is contributed by American Cuisine. Round the final value to 2 decimal places */
+
+SELECT ROUND((100*(SUM(CASE WHEN cuisine= 'American' THEN price ELSE 0 END))/SUM(price)),2) AS American_Revenue
+FROM Orders;
